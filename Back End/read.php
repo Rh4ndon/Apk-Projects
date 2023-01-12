@@ -37,16 +37,16 @@ echo "ERROR: Could not able to execute". $query." ". mysqli_error($dbc);
   <title>Document</title>
 </head>
 <body>
-<section>
-<h2>Hospital Vacant Rooms and Total Rooms</h2>
+<section>Available Rooms and Total Rooms</h2>
 <div class="tbl-header">
 <table cellpadding="0" cellspacing="0" border="0">
   <thead>
   <tr>
     <th>ID.</th>
     <th>Name</th>
-    <th>Vacant Rooms</th>
-    <th>Total Room</th>
+    <th>Available Rooms</th>
+    <th>Occupied</th>
+    <th>Total Rooms</th>
   </tr>
   </thead>
 <tbody>
@@ -58,6 +58,7 @@ while($data = mysqli_fetch_array($res))
     <td><?php echo $data['ID']; ?></td>
     <td><?php echo $data['Name']; ?></td>
     <td><?php echo $data['Vacant']; ?></td>
+    <td><?php echo $data['Occupied']; ?></td>
     <td><?php echo $data['Total']; ?></td>
   </tr>	
 <?php

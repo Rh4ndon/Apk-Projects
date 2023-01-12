@@ -14,8 +14,9 @@ exit();
 $ID = mysqli_real_escape_string($dbc, $_GET['ID']);
 $Name = mysqli_real_escape_string($dbc, $_GET['Name']);
 $Vacant = mysqli_real_escape_string($dbc, $_GET['Vacant']);
+$Occupied = mysqli_real_escape_string($dbc, $_GET['Occupied']);
 $Total = mysqli_real_escape_string($dbc, $_GET['Total']);
-$query = "INSERT INTO hospitals(ID, Name, Vacant, Total) VALUES ('$ID', '$Name', '$Vacant', '$Total')";
+$query = "INSERT INTO hospitals(ID, Name, Vacant, Occupied, Total) VALUES ('$ID', '$Name', '$Vacant', '$Occupied', '$Total')";
 if(mysqli_query($dbc, $query)){
 echo "Records added successfully";
 } 

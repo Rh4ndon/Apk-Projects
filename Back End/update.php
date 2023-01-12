@@ -14,8 +14,9 @@ exit();
 $ID = mysqli_real_escape_string($dbc, $_GET['ID']);
 $Name = mysqli_real_escape_string($dbc, $_GET['Name']);
 $Vacant = mysqli_real_escape_string($dbc, $_GET['Vacant']);
+$Occupied = mysqli_real_escape_string($dbc, $_GET['Occupied']);
 $Total = mysqli_real_escape_string($dbc, $_GET['Total']);
-$query = "Update hospitals SET Name='$Name',Vacant='$Vacant',Total='$Total' where ID='$ID'";
+$query = "Update hospitals SET Name='$Name',Vacant='$Vacant',Occupied='$Occupied',Total='$Total' where ID='$ID'";
 if(mysqli_query($dbc, $query)){
 echo "Records Updated successfully";
 } 
